@@ -12,7 +12,7 @@
 --     fachrichtung VARCHAR(255) NOT NULL
 -- );
 
--- INSERT INTO dozenten (vorname, nachname, fachrichtung) VALUES ('Lautz', 'Weise', 'Systemintegrator'); --absichtlich Latz, wegen SQLite
+-- INSERT INTO dozenten (vorname, nachname, fachrichtung) VALUES ('Latz', 'Weise', 'Systemintegrator'); --absichtlich Latz, wegen SQLite
 -- INSERT INTO dozenten (vorname, nachname, fachrichtung) VALUES ('Fritz-Rainer', 'Döbbelin', 'Anwendungsentwickler');
 
 

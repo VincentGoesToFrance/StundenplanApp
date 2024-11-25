@@ -6,11 +6,13 @@ git-Befehle:
     git commit -m "x"
     git push -u origin main
 
-# individuell
+# nach ordner
 virtuelle umgebung: python -m venv .venv
 . .venv/bin/activate
-pip install flask, mysql.connector
+pip install flask mysql.connector
 (wenn (base) dann conda deactivate)
+
+flask --app app run --debug
 
 # Testdatenbank mit SQLITE test_stundenplanDB.sql
 
@@ -34,7 +36,7 @@ Schema in MariaDB einfügen:
     terminal: passwort eingeben
 
 MariaDB-Befehle:
-mysql -u root -p -> passwort
+mysql -u root -p -> passwort /hardcoded!
 show databases;
 use <database>;
 show tables <database>
