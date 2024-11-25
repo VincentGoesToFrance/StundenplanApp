@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benutzerliste</title>
+</head>
+<body>
+    <h1>Benutzer:</h1>
+    <ul>
+        {% for user in liste %}
+            <li>{{ user[0]}} {{user[1] }}</li>
+        {% else %}
+            <li>Keine Benutzer gefunden.</li>
+        {% endfor %}
+    </ul>
+    <p>{{abc}}</p>
+</body>
+</html>

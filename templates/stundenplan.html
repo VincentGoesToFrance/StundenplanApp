@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stundenplan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stundenplan.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Stundenplan</h1>
+    </header>
+
+    <div class="timetable">
+        <table>
+            <thead>
+                <tr>
+                    <th>Uhrzeit</th>
+                    <th>Montag</th>
+                    <th>Dienstag</th>
+                    <th>Mittwoch</th>
+                    <th>Donnerstag</th>
+                    <th>Freitag</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>08:00 - 09:00</td>
+                    <td></td>
+                    <td>Deutsch</td>
+                    <td>Englisch</td>
+                    <td>Biologie</td>
+                    <td>Sport</td>
+                </tr>
+                <tr>
+                    <td>09:00 - 10:00</td>
+                    <td>Physik</td>
+                    <td>Mathematik</td>
+                    <td>Geschichte</td>
+                    <td>Chemie</td>
+                    <td>Musik</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td>Englisch</td>
+                    <td>Sport</td>
+                    <td>Mathematik</td>
+                    <td>Deutsch</td>
+                    <td>Kunst</td>
+                </tr>
+                <tr>
+                    <td>11:00 - 12:00</td>
+                    <td>Biologie</td>
+                    <td>Chemie</td>
+                    <td>Sport</td>
+                    <td>Mathematik</td>
+                    <td>Geschichte</td>
+                </tr>
+                <tr>
+                    <td>12:00 - 13:00</td>
+                    <td>Deutsch</td>
+                    <td>Biologie</td>
+                    <td>Deutsch</td>
+                    <td>Englisch</td>
+                    <td>Mathematik</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Meine Stundenplan-App</p>
+    </footer>
+</body>
+</html>
