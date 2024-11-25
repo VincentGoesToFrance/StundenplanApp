@@ -1,5 +1,5 @@
 # GitClone:
-https://github.com/VincentGoesToFrance/stundenplanApp
+https://github.com/VincentGoesToFrance/stundenplan
 
 # individuell
 virtuelle umgebung: python -m venv .venv
