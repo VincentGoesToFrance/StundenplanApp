@@ -1,6 +1,11 @@
 # GitClone:
 https://github.com/VincentGoesToFrance/stundenplan
 
+git-Befehle:
+    git add .
+    git commit -m "x"
+    git push -u origin main
+
 # individuell
 virtuelle umgebung: python -m venv .venv
 . .venv/bin/activate
