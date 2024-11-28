@@ -28,6 +28,7 @@ SQLITE-Befehle:
 .databases
 .tables
 .quit
+pragma table_info(<tabellenname>)
 
 MariaDB installieren
 Schema in MariaDB einfügen:

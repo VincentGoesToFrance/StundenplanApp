@@ -11,7 +11,7 @@
         <h1>Stundenplan</h1>
     </header>
     <div class="infos">
-        <p>Klasse: <span id="klasse">23/2</span></p>
+        <p>Klasse: <span id="klasse">{{liste[0]}}</span></p>
         <p>KW: <span id="kw"></span>{{kalender[0]["kalenderwoche"]}}</p>
         <p>Datum: <span id="datum">{{kalender[0]["start_datum"]}} - {{kalender[0]["end_datum"]}}</span></p>
       </div>
@@ -31,11 +31,11 @@
             <tbody>
                 <tr>
                     <td>08:00 - 09:30</td>
-                    <td rowspan="5">Projektarbeit</td>
-                    <td rowspan="5">Projektarbeit</td>
-                    <td rowspan="5">Projektarbeit</td>
-                    <td rowspan="5">Projektarbeit</td>
-                    <td rowspan="4">Projektarbeit</td>
+                    <td rowspan="5">{{liste[1]}}</td>
+                    <td rowspan="5">{{liste[1]}}</td>
+                    <td rowspan="5">{{liste[1]}}</td>
+                    <td rowspan="5">{{liste[1]}}</td>
+                    <td rowspan="4">{{liste[1]}}</td>
                 </tr>               
                 <tr>
                     <td>09:45 - 11:15</td>

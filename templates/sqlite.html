@@ -6,12 +6,18 @@
     <title>Benutzerliste</title>
 </head>
 <body>
-    <h1>Benutzer:</h1>
+    <h1>Tabellen:</h1>
+        <a href='./angestellte'>Angestellte</a><br>
+        <a href='./schüler'>Schüler</a><br>
+        <a href='./fachrichtungen'>Fachrichtungen</a><br>
+        <a href='./klassen'>Klassen</a><br>
+        <a href='./themen'>Themen</a><br>
+        <a href='./fach_angestellte'>Fach_Angestellte</a><br>
     <ul>
         {% for user in liste %}
             <li>{{ user[0]}} {{user[1] }}</li>
         {% else %}
-            <li>Keine Benutzer gefunden.</li>
+            <!-- <li>Keine Benutzer gefunden.</li> -->
         {% endfor %}
     </ul>
     <p>{{abc}}</p>
