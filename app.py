@@ -28,9 +28,11 @@ def calender():
 def bwsa(username):
     return "<p>test you</p>"
 
-@app.route("/stundenplan")
-def stundenplan():
-    return render_template("stundenplan.html")
+#ifabfrage, bis welches jahr angezeigt werden soll. leerer stundenplan mit stundenplan/ , ansonsten mit jahr? db mit mehreren jahren
+@app.route("/stundenplan/<int:jahr>/<int:kalenderwoche>")
+def stundenplan(jahr, kalenderwoche):
+    kalender = show_sqlite_db(jahr, kalenderwoche)
+    return render_template("stundenplan.html", kalender=kalender)
 
 @app.route("/login")
 def login():
@@ -43,7 +45,7 @@ def football():
 # datenbank
 
 #sqlite
-app.config["DATABASE_sqlite"] = "./static/db/test_stundenplanDB.db"
+app.config["DATABASE_sqlite"] = "./static/db/kalender.db"
 
 def get_sqlite_db():
     g.db = sqlite3.connect(app.config['DATABASE_sqlite'])
@@ -51,9 +53,9 @@ def get_sqlite_db():
     return g.db
 
 # @app.cli.command('show_db') 
-def show_sqlite_db():
+def show_sqlite_db(jahr, kalenderwoche):
     db = get_sqlite_db()  # Verbindung zur DB holen
-    cursor = db.execute('SELECT * FROM dozenten')  # Alle Zeilen aus der Tabelle abfragen
+    cursor = db.execute('SELECT * FROM kalenderwochen where kalenderwoche=? and jahr=?', (kalenderwoche, jahr))  # Alle Zeilen aus der Tabelle abfragen
     rows = cursor.fetchall()  # Alle Zeilen holen
     return rows
     
@@ -63,9 +65,8 @@ def show_sqlite_db():
 
 @app.route("/sqlite")
 def sqlite():
-    test = show_sqlite_db()
-    olaf = "abcdef"
-    return render_template("sqlite.html", liste=test, abc=olaf)
+    kalender = show_sqlite_db()
+    return render_template("sqlite.html", liste=kalender)
 
 
 #mariaDB

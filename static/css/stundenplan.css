@@ -24,6 +24,14 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.infos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 1.3rem;
+    margin: 1.2rem 0;
+  }
+
 table {
     width: 100%;
     border-collapse: collapse;
