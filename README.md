@@ -8,8 +8,10 @@ git-Befehle:
 
 # nach ordner
 virtuelle umgebung: python -m venv .venv
-. .venv/bin/activate
+. .venv/bin/activate (linux)
+.\.venv\Scripts\Activate (windows)
 pip install flask mysql.connector
+pip freeze //schauen was in der virtuellen umgebung installiert ist
 (wenn (base) dann conda deactivate)
 
 flask --app app run --debug
@@ -19,9 +21,11 @@ flask --app app run --debug
 ./static/db/test_stundenplan.sql öffnen und kommentieren bzw. auskommentieren der entsprechenden DB
 
 SQLITE installieren
+kalender_db.py skript ausführen, db-datei nach ./static/db
 Schema(./static/db/test_stundenplanDB.sql) in SQLITE einfügen:
     definieren: test_stundenplanDB.sql
     terminal: sqlite3 ./static/db/test_stundenplanDB.db
+    windows: 
     terminal: .read ./static/db/test_stundenplanDB.sql
 
 SQLITE-Befehle:
